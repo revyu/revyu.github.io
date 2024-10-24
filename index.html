@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Моя страничка</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- Пустой блок сверху -->
+     <div class="spacer"></div>
+
+
+     <section class="block fade-in">
+        <div class="content">
+            <div class="text">
+                <h1>Привет, я Сережа </h1>
+                <p>
+                    Это мой сайт для курса по Web программированию. Я никогда не понимал что писать в "о себе"  поэтому напишу что я не люблю манную кашу и контактные линзы, а люблю Маркеса , новые знакомства и снегопады
+                </p>
+            </div>
+            <div class="image">
+                <img src="images/1.webp">
+            </div>
+        </div>
+    </section>
+
+    <section class="block bounce">
+        <div class="content reverse">
+            <div class="text">
+                <h2>Образование</h2>
+                <p>
+                    Я учился в 117 гимназии в Омске а потом поступил сюда , в НГТУ НЭТИ
+                </p>
+                <p>
+                    В школе я много занимался олимпиадами по математике и немного по информатике. Однажды тренер в лагере сказал что больше всего математики в AI и DS и поэтому я решил поступать на факультет связанный с этим 
+                </p>
+            </div>
+            <div class="image">
+                <img src="images/2.png">
+            </div>
+        </div>
+    </section>
+
+    <section class="block ease-in-out">
+        <div class="content">
+            <div class="text">
+                <h2>Навыки</h2>
+                <h3>
+                    Python
+                </h3>
+                <p>
+                    torch ,transformers, numpy ,pandas, sklearn, matplotlib, seaborn, langchain, разные библиотеки бустингов , api сервисов по ml 
+                </p>
+                <h3>
+                    Другое
+                </h3>
+                <p>
+                    C++(5/10) , Js-Html-css(в процессе), git ,sql (mysql),linux(3/10)
+                </p>
+
+            </div>
+            <div class="image">
+                <img src="images/3.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section class="block blur">
+        <div class="content reverse">
+            <div class="text">
+                <h2>Проекты</h2>
+                <p>
+                    У меня очень плохая привычка начинать но не заканчивать.
+                </p>
+                <h3>Из опыта</h3>
+                <p>
+                    Тг-бот по подбору подходящего направления подготовки абитуриента на основе его жизненных предпочтений и баллов эге (была реализована только часть общения с ботом как с менеджером вуза и подбор по баллам эге)
+                    Была цель сделать так что бы он понимал речь на естественном языке впринципе она была достигнута 
+                </p>
+                <p>
+                    Rl agent играющий в камень ножницы бумага 
+                    Была идея построить предсказательную модель на основе RNN, возникли проблемы с пониманием torch , возможно скоро вернусь так как в torch теперь знаю больше
+                </p>
+                <h3>
+                    Cейчас
+                </h3>
+                <p>
+                    В стартапе разрабатываю LLM агента учителя по программированию
+                </p>
+            </div>
+            <div class="image">
+                <img src="images/4.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section class="block fade-in">
+        <div class="content">
+            <div class="text">
+                <h2>Контакты</h2>
+                <p>
+
+                    <a href="https://vk.com/sesiv"> vk</a>
+                </p>
+                <p>
+
+                    <a href="https://t.me/revyu">tg</a>
+                </p>
+                <p>
+
+                    
+                    <a href="https://github.com/revyu">github</a>
+                </p>
+                
+            </div>
+            <div class="image">
+                <img src="images/5.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section class="block fade-in">
+        <div class="content">
+            <div class="text">
+                <h2>Комментарии</h2>
+                <form id="comment-form">
+                    <textarea id="comment-input" placeholder="Оставьте свой комментарий" rows="4" style="width: 100%;"></textarea>
+                    <button type="submit" style="margin-top: 10px;">Отправить</button>
+                </form>
+                <div id="comments-section" style="margin-top: 20px;">
+                    <!-- Здесь будут отображаться комментарии -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+     <!-- Пустой блок снизу -->
+     <div class="spacer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

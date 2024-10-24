@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Добавляем отступы сверху и снизу */
+.spacer {
+    height: 20vh; /* Отступ равный 20% высоты окна */
+}
+
+
+
+.block.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.content.reverse {
+    flex-direction: row-reverse;
+}
+
+.text, .image {
+    flex: 1;
+    padding: 20px;
+}
+
+.text {
+    box-sizing: border-box;
+}
+
+.image {
+    box-sizing: border-box;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+/* Общие стили для блоков */
+.block {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s, transform 0.6s;
+    padding: 50px 0;
+}
+
+/* Эффект Fade In (плавное появление) */
+.fade-in {
+    transition: opacity 1s ease-in, transform 1s ease-in;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Эффект Bounce (подпрыгивание) */
+.bounce {
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.bounce.visible {
+    opacity: 1;
+    animation: bounce 1s ease-out;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-75px);
+    }
+}
+
+/* Эффект Ease In Out (медленное начало и конец) */
+.ease-in-out {
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.ease-in-out.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Эффект Blur (появление с размытием) */
+.blur {
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out, filter 0.8s ease-out;
+    filter: blur(5px);
+}
+
+.blur.visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+
+#comment-form {
+    margin-top: 20px;
+}
+
+#comments-section {
+    margin-top: 20px;
+    max-width: 1000px;
+    padding: 0 20px;
+}
