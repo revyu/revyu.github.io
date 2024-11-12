@@ -74,3 +74,36 @@ document.addEventListener('DOMContentLoaded', function() {
     // Загрузка комментариев при загрузке страницы
     loadComments();
 });
+
+
+// Загрузка комментариев с сервера
+const loadComments = () => {
+    fetch('/api/comments')
+        .then(response => response.json())
+        .then(comments => displayComments(comments))
+        .catch(error => console.error('Ошибка загрузки комментариев:', error));
+};
+
+// Отправка нового комментария на сервер
+commentForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const newComment = commentInput.value.trim();
+    if (newComment !== "") {
+        fetch('/api/comments', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ comment: newComment })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                loadComments(); // Перезагрузка комментариев после добавления
+                commentInput.value = ""; // Очищаем поле ввода
+            }
+        })
+        .catch(error => console.error('Ошибка добавления комментария:', error));
+    }
+});
